@@ -1,69 +1,119 @@
-# ReportGen AI - Smart Report Generation Platform
+# <img src="https://imgur.com/4M34hi2.png" alt="ReportGen AI Logo" width="48" style="vertical-align:middle;"> ReportGen AI
 
-A modern SaaS platform that uses AI to generate professional reports from templates and data. Upload your template, provide your data, and let our AI create stunning reports in seconds.
+> **AI-powered SaaS for effortless, professional document generation**
 
-## Features
+<p align="center">
+  <img src="https://imgur.com/4M34hi2.png" alt="ReportGen AI Banner" width="300"/>
+</p>
 
-- 🎨 Modern, responsive UI built with Material-UI
-- 📤 Easy template upload with drag-and-drop support
-- 🤖 AI-powered report generation
-- 📝 Support for multiple file formats (DOCX, PDF)
-- ⚡ Fast and efficient processing
+<p align="center">
+  <a href="https://github.com/alexisvalentino/expert-octo-guacamole/actions"><img src="https://img.shields.io/github/actions/workflow/status/alexisvalentino/expert-octo-guacamole/ci.yml?branch=main&style=flat-square" alt="CI Status"></a>
+  <img src="https://img.shields.io/badge/Built%20With-Bun-orange?style=flat-square" alt="Bun">
+  <img src="https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square" alt="MIT License">
+  <img src="https://img.shields.io/badge/Made%20with-OpenAI-ff6b35?style=flat-square" alt="OpenAI">
+</p>
 
-## Getting Started
+---
 
-### Prerequisites
+## 🚀 Overview
 
-- Node.js (v14 or higher)
-- npm or yarn
+**ReportGen AI** is a modern SaaS platform that leverages AI to generate professional reports and documents from your templates and data. Upload your template, provide your data, and let our AI create stunning, consistent documents in seconds.
 
-### Installation
+---
 
-1. Clone the repository:
+## ✨ Features
+
+- 🤖 **AI-powered document generation**
+- 📄 **Multiple formats**: DOCX, PDF, and more
+- 🎨 **Customizable templates**
+- 👥 **Real-time collaboration**
+- 🔒 **Secure & private**
+- ⚡ **Lightning-fast performance (Bun-powered)**
+- 🌐 **Modern, responsive UI (Material-UI)**
+
+---
+
+## 🖼️ Screenshots
+
+<p align="center">
+  <img src="https://imgur.com/8zQbQkT.png" alt="Landing Page" width="600"/>
+  <br>
+  <em>Landing Page</em>
+</p>
+<p align="center">
+  <img src="https://imgur.com/6Q2Qw1A.png" alt="Dashboard" width="600"/>
+  <br>
+  <em>Dashboard - Generate Reports</em>
+</p>
+
+---
+
+## ⚡ Quick Start
+
 ```bash
-git clone https://github.com/yourusername/report-generator-saas.git
-cd report-generator-saas
+# 1. Clone the repository
+$ git clone https://github.com/alexisvalentino/expert-octo-guacamole.git
+$ cd expert-octo-guacamole
+
+# 2. Install dependencies (with Bun)
+$ bun install
+
+# 3. Start the development server
+$ bun run dev
+
+# 4. Open your browser at http://localhost:3000
 ```
 
-2. Install dependencies:
-```bash
-npm install
-# or
-yarn install
-```
+---
 
-3. Start the development server:
-```bash
-npm start
-# or
-yarn start
-```
+## 🛠️ Tech Stack
 
-The application will be available at `http://localhost:3000`.
+- **Frontend:** React, Material-UI, Framer Motion
+- **Backend:** Node.js (Express), OpenAI API
+- **Bundler/Runtime:** Bun
+- **Styling:** CSS-in-JS, Styled Components
+- **Icons:** React Icons, Emoji
 
-## Project Structure
+---
 
-```
-src/
-  ├── components/         # React components
-  │   ├── Dashboard.js    # Main dashboard for report generation
-  │   ├── LandingPage.js  # Landing page component
-  │   └── Navbar.js       # Navigation component
-  ├── App.js             # Main application component
-  └── index.js           # Application entry point
-```
+## 📚 Usage
 
-## Usage
+1. **Visit the landing page** and explore features and use cases.
+2. **Click "Launch App"** to access the dashboard.
+3. **Upload your template** (DOCX or PDF).
+4. **Enter your data** in the provided text area.
+5. **Generate your report** with a single click.
+6. **Download or share** your professional document.
 
-1. Visit the landing page and click "Get Started"
-2. Upload your template file (DOCX or PDF)
-3. Enter your data in the provided text area
-4. Click "Generate Report" to create your report
+---
 
-## Contributing
+## 🤝 Contributing
 
-Contributions are welcome! Please feel free to submit a Pull Request.
+Contributions are welcome! To get started:
 
-## License
+1. Fork the repository
+2. Create a new branch (`git checkout -b feature/your-feature`)
+3. Commit your changes (`git commit -m 'Add new feature'`)
+4. Push to the branch (`git push origin feature/your-feature`)
+5. Open a Pull Request
 
-This project is licensed under the MIT License - see the LICENSE file for details. 
+---
+
+## 📄 License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+---
+
+## 🙏 Acknowledgements
+
+- [OpenAI](https://openai.com/) for the AI engine
+- [Bun](https://bun.sh/) for the blazing-fast runtime
+- [Material-UI](https://mui.com/) for the beautiful UI components
+- [Framer Motion](https://www.framer.com/motion/) for smooth animations
+
+---
+
+<p align="center">
+  <b>Transform your documents with AI. Try ReportGen AI today!</b>
+</p> 
