@@ -1,0 +1,17 @@
+[install]
+# Use exact versions for dependencies
+exact = true
+
+[test]
+# Enable watch mode for tests
+watch = true
+
+[debug]
+# Enable source maps
+sourcemap = true
+
+[build]
+# Enable minification
+minify = true
+# Enable source maps
+sourcemap = true 

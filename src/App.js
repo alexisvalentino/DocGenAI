@@ -1,29 +1,20 @@
 import React from 'react';
-import { Routes, Route } from 'react-router-dom';
-import { ThemeProvider, createTheme } from '@mui/material';
+import { Routes, Route, useLocation } from 'react-router-dom';
+import { ThemeProvider, CssBaseline } from '@mui/material';
 import LandingPage from './components/LandingPage';
 import Dashboard from './components/Dashboard';
 import Navbar from './components/Navbar';
-
-const theme = createTheme({
-  palette: {
-    primary: {
-      main: '#2563eb',
-    },
-    secondary: {
-      main: '#4f46e5',
-    },
-  },
-  typography: {
-    fontFamily: 'Inter, sans-serif',
-  },
-});
+import theme from './theme';
 
 function App() {
+  const location = useLocation();
+  const showNavbar = location.pathname === '/dashboard';
+
   return (
     <ThemeProvider theme={theme}>
+      <CssBaseline />
       <div className="App">
-        <Navbar />
+        {showNavbar && <Navbar />}
         <Routes>
           <Route path="/" element={<LandingPage />} />
           <Route path="/dashboard" element={<Dashboard />} />
