@@ -1,9 +1,9 @@
-# <img src="https://imgur.com/4M34hi2.png" alt="ReportGen AI Logo" width="48" style="vertical-align:middle;"> ReportGen AI
+# <img src="./assets/logo.jpg" alt="ReportGen AI Logo" width="40" height="40" style="vertical-align:middle; border-radius:8px; object-fit:cover;"> ReportGen AI
 
 > **AI-powered SaaS for effortless, professional document generation**
 
 <p align="center">
-  <img src="https://imgur.com/4M34hi2.png" alt="ReportGen AI Banner" width="300"/>
+  <img src="./assets/logo.jpg" alt="ReportGen AI Banner" width="400" style="border-radius:12px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"/>
 </p>
 
 <p align="center">
