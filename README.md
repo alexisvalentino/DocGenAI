@@ -33,21 +33,6 @@
 
 ---
 
-## 🖼️ Screenshots
-
-<p align="center">
-  <img src="https://imgur.com/8zQbQkT.png" alt="Landing Page" width="600"/>
-  <br>
-  <em>Landing Page</em>
-</p>
-<p align="center">
-  <img src="https://imgur.com/6Q2Qw1A.png" alt="Dashboard" width="600"/>
-  <br>
-  <em>Dashboard - Generate Reports</em>
-</p>
-
----
-
 ## ⚡ Quick Start
 
 ```bash
