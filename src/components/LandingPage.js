@@ -19,6 +19,7 @@ import { styled } from '@mui/material/styles';
 import { motion } from 'framer-motion';
 import { Link as ScrollLink } from 'react-scroll';
 import { FaBars, FaCheckCircle } from 'react-icons/fa';
+import DescriptionIcon from '@mui/icons-material/Description';
 
 // Styled Components
 const StyledAppBar = styled(AppBar)(({ theme }) => ({
@@ -30,6 +31,7 @@ const StyledAppBar = styled(AppBar)(({ theme }) => ({
   left: 0,
   right: 0,
   zIndex: theme.zIndex.appBar,
+  boxShadow: '0 4px 30px rgba(0, 0, 0, 0.1)',
 }));
 
 const Logo = styled(Typography)(({ theme }) => ({
@@ -38,18 +40,42 @@ const Logo = styled(Typography)(({ theme }) => ({
   WebkitTextFillColor: 'transparent',
   fontWeight: 800,
   fontSize: '1.5rem',
+  display: 'flex',
+  alignItems: 'center',
+  gap: theme.spacing(1),
   [theme.breakpoints.up('md')]: {
     fontSize: '2rem',
+  },
+  '& .MuiSvgIcon-root': {
+    fontSize: '1.2em',
+    color: '#FF6B35',
   },
 }));
 
 const NavButton = styled(Button)(({ theme }) => ({
   color: 'white',
-  marginLeft: theme.spacing(2),
+  margin: theme.spacing(0, 1),
   textTransform: 'none',
+  fontSize: '1rem',
+  fontWeight: 500,
+  position: 'relative',
+  '&::after': {
+    content: '""',
+    position: 'absolute',
+    width: '0%',
+    height: '2px',
+    bottom: 0,
+    left: '50%',
+    background: 'linear-gradient(45deg, #FF6B35 30%, #FF9F1C 90%)',
+    transition: 'all 0.3s ease-in-out',
+    transform: 'translateX(-50%)',
+  },
   '&:hover': {
     color: '#FF6B35',
     background: 'transparent',
+    '&::after': {
+      width: '80%',
+    },
   },
 }));
 
@@ -58,8 +84,14 @@ const LaunchButton = styled(Button)(({ theme }) => ({
   color: 'white',
   marginLeft: theme.spacing(2),
   textTransform: 'none',
+  fontWeight: 600,
+  padding: '8px 24px',
+  borderRadius: '30px',
+  transition: 'all 0.3s ease-in-out',
   '&:hover': {
     background: 'linear-gradient(45deg, #FF9F1C 30%, #FF6B35 90%)',
+    transform: 'translateY(-2px)',
+    boxShadow: '0 8px 24px rgba(255, 107, 53, 0.3)',
   },
 }));
 
@@ -238,11 +270,11 @@ function LandingPage() {
   return (
     <Box sx={{ bgcolor: 'background.default', minHeight: '100vh', position: 'relative' }}>
       <StyledAppBar>
-        <Toolbar>
+        <Toolbar sx={{ justifyContent: 'space-between', py: 1 }}>
           <Logo variant="h6" component={RouterLink} to="/" sx={{ textDecoration: 'none' }}>
-            ReportGen AI
+            <DescriptionIcon />
+            Dokumento AI
           </Logo>
-          <Box sx={{ flexGrow: 1 }} />
           {isMobile ? (
             <IconButton
               color="inherit"
@@ -252,7 +284,13 @@ function LandingPage() {
               <FaBars />
             </IconButton>
           ) : (
-            <Box sx={{ display: 'flex', alignItems: 'center' }}>
+            <Box sx={{ 
+              display: 'flex', 
+              alignItems: 'center',
+              flex: 1,
+              justifyContent: 'center',
+              gap: 2
+            }}>
               <ScrollLink to="features" smooth={true} duration={500}>
                 <NavButton>Features</NavButton>
               </ScrollLink>
@@ -262,22 +300,25 @@ function LandingPage() {
               <ScrollLink to="benefits" smooth={true} duration={500}>
                 <NavButton>Benefits</NavButton>
               </ScrollLink>
-              <LaunchButton
-                component={RouterLink}
-                to="/dashboard"
-                variant="contained"
-              >
-                Launch App
-              </LaunchButton>
             </Box>
+          )}
+          {!isMobile && (
+            <LaunchButton
+              component={RouterLink}
+              to="/dashboard"
+              variant="contained"
+            >
+              Get Started
+            </LaunchButton>
           )}
         </Toolbar>
         {isMobile && mobileMenuOpen && (
           <Box
             sx={{
-              background: 'rgba(26, 26, 26, 0.95)',
+              background: 'rgba(26, 26, 26, 0.98)',
               backdropFilter: 'blur(10px)',
               p: 2,
+              borderTop: '1px solid rgba(255, 107, 53, 0.1)',
             }}
           >
             <Grid container direction="column" spacing={2}>
@@ -303,7 +344,7 @@ function LandingPage() {
                   variant="contained"
                   fullWidth
                 >
-                  Launch App
+                  Get Started
                 </LaunchButton>
               </Grid>
             </Grid>
@@ -366,7 +407,7 @@ function LandingPage() {
                         fontSize: { xs: '1.1rem', sm: '1.25rem', md: '1.5rem' },
                       }}
                     >
-                      Experience the future of document generation. Upload your template, provide your data, and let our AI create professional documents in seconds.
+                      Experience the future of document generation with Dokumento AI. Upload your template, provide your data, and let our AI create professional documents in seconds.
                     </Typography>
 
                     <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
@@ -510,7 +551,7 @@ function LandingPage() {
               gutterBottom
               sx={{ color: 'white', mb: 6 }}
             >
-              Why Choose ReportGen AI?
+              Why Choose Dokumento AI?
             </Typography>
             <Grid container spacing={4}>
               {benefits.map((benefit, index) => (
@@ -560,10 +601,10 @@ function LandingPage() {
               }}
             >
               <Typography variant="h4" gutterBottom align="center" sx={{ color: 'white' }}>
-                Join Our Waitlist
+                Join Dokumento AI Waitlist
               </Typography>
               <Typography variant="body1" align="center" sx={{ mb: 4, color: 'rgba(255, 255, 255, 0.7)' }}>
-                Be the first to know when we launch and get early access to our platform.
+                Be the first to know when we launch and get early access to our AI-powered document generation platform.
               </Typography>
               <form onSubmit={handleWaitlistSubmit}>
                 <Grid container spacing={2}>

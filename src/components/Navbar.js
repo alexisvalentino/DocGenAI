@@ -72,7 +72,7 @@ function Navbar() {
               to="/"
               sx={{ textDecoration: 'none' }}
             >
-              ReportGen AI
+              Dokumento AI
             </Logo>
             <Box
               component={motion.div}

@@ -1,9 +1,9 @@
-# <img src="./assets/logo.jpg" alt="ReportGen AI Logo" width="40" height="40" style="vertical-align:middle; border-radius:8px; object-fit:cover;"> ReportGen AI
+# <img src="./assets/logo.jpg" alt="Dokumento AI Logo" width="40" height="40" style="vertical-align:middle; border-radius:8px; object-fit:cover;"> Dokumento AI
 
 > **AI-powered SaaS for effortless, professional document generation**
 
 <p align="center">
-  <img src="./assets/logo.jpg" alt="ReportGen AI Banner" width="400" style="border-radius:12px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"/>
+  <img src="./assets/logo.jpg" alt="Dokumento AI Banner" width="400" style="border-radius:12px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"/>
 </p>
 
 <p align="center">
@@ -17,7 +17,7 @@
 
 ## 🚀 Overview
 
-**ReportGen AI** is a modern SaaS platform that leverages AI to generate professional reports and documents from your templates and data. Upload your template, provide your data, and let our AI create stunning, consistent documents in seconds.
+**Dokumento AI** is a modern SaaS platform that leverages AI to generate professional reports and documents from your templates and data. Upload your template, provide your data, and let our AI create stunning, consistent documents in seconds.
 
 ---
 
@@ -115,5 +115,5 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 ---
 
 <p align="center">
-  <b>Transform your documents with AI. Try ReportGen AI today!</b>
+  <b>Transform your documents with AI. Try Dokumento AI today!</b>
 </p> 
