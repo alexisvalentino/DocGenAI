@@ -70,6 +70,38 @@ $ bun run dev
 5. **Generate your report** with a single click.
 6. **Download or share** your professional document.
 
+### 🔄 Detailed Workflow
+
+1. **Template First:**
+   - Users upload their template document (in DOCX or PDF format)
+   - This template serves as the "blueprint" or "structure" for how the final document should look
+   - It could be a report format, a letter template, or any other document structure they want to maintain
+
+2. **Data Input:**
+   - After the template is uploaded, users provide their data
+   - This data will be the content that needs to be formatted according to the template
+   - The data could be text, numbers, or any other information that needs to be incorporated into the document
+
+3. **AI Generation:**
+   - The AI then takes both the template and the data
+   - It analyzes the template's structure and formatting
+   - It intelligently places the user's data into the template while maintaining:
+     - The exact same formatting
+     - The same layout
+     - The same styling
+     - Any placeholders or sections from the original template
+
+4. **Final Output:**
+   - The result is a professional document that looks identical to the template
+   - But now it's filled with the user's data
+   - The document maintains all the professional formatting and structure of the original template
+
+This approach is particularly useful for:
+- Generating multiple reports with the same professional format
+- Maintaining consistency across documents
+- Saving time on formatting and layout
+- Ensuring professional-looking output every time
+
 ---
 
 ## 🤝 Contributing
