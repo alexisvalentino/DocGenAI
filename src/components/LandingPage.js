@@ -188,12 +188,73 @@ const Globe = styled(Box)({
   },
 });
 
+const WorkflowSection = styled(Box)(({ theme }) => ({
+  padding: theme.spacing(8, 0),
+  background: 'linear-gradient(135deg, #1A1A1A 0%, #2D2D2D 100%)',
+  color: 'white',
+}));
+
+const WorkflowStep = styled(Paper)(({ theme }) => ({
+  padding: theme.spacing(4),
+  background: 'rgba(255, 255, 255, 0.05)',
+  backdropFilter: 'blur(10px)',
+  borderRadius: '16px',
+  border: '1px solid rgba(255, 255, 255, 0.1)',
+  transition: 'transform 0.3s ease-in-out',
+  '&:hover': {
+    transform: 'translateY(-5px)',
+  },
+}));
+
 const features = [
   'AI-powered document generation',
   'Multiple document formats support',
   'Customizable templates',
   'Real-time collaboration',
   'Secure and private',
+];
+
+const workflowSteps = [
+  {
+    title: 'Template First',
+    description: 'Upload your template document (DOCX or PDF) that serves as the blueprint for your final document.',
+    icon: '📄',
+    details: [
+      'Template serves as the structure blueprint',
+      'Supports DOCX and PDF formats',
+      'Maintains your desired document layout'
+    ]
+  },
+  {
+    title: 'Data Input',
+    description: 'Provide your data that will be formatted according to the template structure.',
+    icon: '📝',
+    details: [
+      'Enter your content and data',
+      'Support for text, numbers, and more',
+      'Easy data input interface'
+    ]
+  },
+  {
+    title: 'AI Generation',
+    description: 'Our AI analyzes and combines your template with data while maintaining perfect formatting.',
+    icon: '🤖',
+    details: [
+      'Intelligent template analysis',
+      'Perfect formatting preservation',
+      'Smart data placement'
+    ]
+  },
+  {
+    title: 'Final Output',
+    description: 'Get a professional document that matches your template exactly, now filled with your data.',
+    icon: '✨',
+    details: [
+      'Identical to template structure',
+      'Professional formatting',
+      'Ready to use immediately'
+    ]
+  }
 ];
 
 const benefits = [
@@ -294,6 +355,9 @@ function LandingPage() {
               <ScrollLink to="features" smooth={true} duration={500}>
                 <NavButton>Features</NavButton>
               </ScrollLink>
+              <ScrollLink to="workflow" smooth={true} duration={500}>
+                <NavButton>How It Works</NavButton>
+              </ScrollLink>
               <ScrollLink to="use-cases" smooth={true} duration={500}>
                 <NavButton>Use Cases</NavButton>
               </ScrollLink>
@@ -325,6 +389,11 @@ function LandingPage() {
               <Grid item>
                 <ScrollLink to="features" smooth={true} duration={500}>
                   <NavButton fullWidth>Features</NavButton>
+                </ScrollLink>
+              </Grid>
+              <Grid item>
+                <ScrollLink to="workflow" smooth={true} duration={500}>
+                  <NavButton fullWidth>How It Works</NavButton>
                 </ScrollLink>
               </Grid>
               <Grid item>
@@ -438,6 +507,60 @@ function LandingPage() {
             </HeroContent>
           </Container>
         </HeroSection>
+
+        <WorkflowSection id="workflow">
+          <Container maxWidth="lg">
+            <Typography
+              variant="h2"
+              component={motion.h2}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              textAlign="center"
+              gutterBottom
+              sx={{ mb: 6 }}
+            >
+              How It <GradientText component="span">Works</GradientText>
+            </Typography>
+            
+            <Grid container spacing={4}>
+              {workflowSteps.map((step, index) => (
+                <Grid item xs={12} md={6} lg={3} key={index}>
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: index * 0.2 }}
+                  >
+                    <WorkflowStep>
+                      <Typography variant="h1" sx={{ mb: 2, fontSize: '2.5rem' }}>
+                        {step.icon}
+                      </Typography>
+                      <Typography variant="h5" gutterBottom sx={{ fontWeight: 600 }}>
+                        {step.title}
+                      </Typography>
+                      <Typography variant="body1" sx={{ mb: 2, color: 'rgba(255, 255, 255, 0.8)' }}>
+                        {step.description}
+                      </Typography>
+                      <Box component="ul" sx={{ pl: 2 }}>
+                        {step.details.map((detail, idx) => (
+                          <Typography
+                            component="li"
+                            key={idx}
+                            variant="body2"
+                            sx={{ mb: 1, color: 'rgba(255, 255, 255, 0.7)' }}
+                          >
+                            {detail}
+                          </Typography>
+                        ))}
+                      </Box>
+                    </WorkflowStep>
+                  </motion.div>
+                </Grid>
+              ))}
+            </Grid>
+          </Container>
+        </WorkflowSection>
 
         {/* Features Section */}
         <Box id="features" sx={{ py: 8, bgcolor: 'background.default' }}>
